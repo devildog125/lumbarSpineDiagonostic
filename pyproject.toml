@@ -1,0 +1,14 @@
+[project]
+name = "lumbarspinediagonostic"
+version = "0.1.0"
+description = "Local AI diagnostic pipeline for lumbar spine MRI analysis"
+readme = "README.md"
+requires-python = ">=3.13"
+license = { text = "PolyForm-Noncommercial-1.0.0" }
+license-files = ["LICENSE"]
+classifiers = [
+    "License :: Other/Proprietary License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3.13",
+]
+dependencies = []
