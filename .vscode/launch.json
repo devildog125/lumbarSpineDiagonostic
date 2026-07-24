@@ -1,0 +1,70 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        // ─── Run / Debug: main pipeline ──────────────────────────────────────
+        {
+            "name": "Run: main.py (full pipeline)",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/main.py",
+            "python": "${workspaceFolder}/.venv/bin/python",
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}",
+            // Override defaults at launch time via the env block or args below
+            "args": [],
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}/src"
+            },
+            "justMyCode": false
+        },
+
+        // ─── Debug: step-through main.py ─────────────────────────────────────
+        {
+            "name": "Debug: main.py",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/main.py",
+            "python": "${workspaceFolder}/.venv/bin/python",
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}",
+            "args": [],
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}/src"
+            },
+            "justMyCode": false,
+            "stopOnEntry": false
+        },
+
+        // ─── Run: currently open file ─────────────────────────────────────────
+        {
+            "name": "Run: current file",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${file}",
+            "python": "${workspaceFolder}/.venv/bin/python",
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}",
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}/src"
+            },
+            "justMyCode": false
+        },
+
+        // ─── Debug: attach to a running process ───────────────────────────────
+        {
+            "name": "Debug: attach to process",
+            "type": "debugpy",
+            "request": "attach",
+            "listen": {
+                "host": "localhost",
+                "port": 5678
+            },
+            "pathMappings": [
+                {
+                    "localRoot": "${workspaceFolder}",
+                    "remoteRoot": "."
+                }
+            ]
+        }
+    ]
+}

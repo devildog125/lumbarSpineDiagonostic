@@ -1,0 +1,9 @@
+{
+    "recommendations": [
+        // Visual Studio keybindings (maps VS shortcuts into VS Code)
+        "ms-vscode.vs-keybindings",
+        // Python language support
+        "ms-python.python",
+        "ms-python.vscode-pylance"
+    ]
+}

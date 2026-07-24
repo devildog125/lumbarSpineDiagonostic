@@ -1,0 +1,26 @@
+{
+    // Python interpreter — points to the uv-managed venv (Python 3.13)
+    "python.defaultInterpreterPath": "${workspaceFolder}/.venv/bin/python",
+    "python.terminal.activateEnvironment": true,
+
+    // Linting / analysis
+    "python.analysis.typeCheckingMode": "basic",
+    "python.analysis.extraPaths": [
+        "${workspaceFolder}/src"
+    ],
+
+    // Formatting
+    "editor.formatOnSave": true,
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.python"
+    },
+
+    // Test discovery (pytest, if added later)
+    "python.testing.pytestEnabled": false,
+    "python.testing.unittestEnabled": false,
+
+    // File associations
+    "files.associations": {
+        "*.dcm": "binary"
+    }
+}
