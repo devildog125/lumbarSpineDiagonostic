@@ -60,10 +60,11 @@ def process_pipeline(csv_path, dicom_dir, output_dir):
         cv2.imwrite(os.path.join(output_dir, "crop_" + filename), cropped_img)
 
 if __name__ == "__main__":
-    # Point these to your local data locations
+    # External SSD paths — update YOUR_SSD_NAME to match your drive (e.g. /Volumes/MySSD)
+    SSD_BASE = "/Volumes/Samsung\ T5\ /MRI\ Training\ Data "
     process_pipeline(
-        csv_path="data/train_coordinates.csv",
-        dicom_dir="data/raw_dicoms",
-        output_dir="data/processed_images"
+        csv_path=f"{SSD_BASE}/train.csv",
+        dicom_dir=f"{SSD_BASE}/train_images",
+        output_dir=f"{SSD_BASE}/processed_images"
     )
     print("Data extraction complete.")
